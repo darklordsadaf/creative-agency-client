@@ -1,0 +1,22 @@
+  
+.sidebar{
+    position: fixed;
+    margin-left: 80px;
+    margin-top: 20px;
+}
+.sidebar li{
+    margin-bottom: 2em;
+}
+span{
+    color: black;
+}
+.sidebar span:hover{
+    
+    color:#7AB259;
+    
+}
+    
+.sidebar svg{
+    margin-right: 5px;
+}
+

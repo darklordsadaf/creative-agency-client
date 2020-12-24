@@ -1,0 +1,21 @@
+.service-card{
+    color: black;
+    padding:20px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.service-card:hover{    
+    color: #7AB259;
+    text-decoration: none;
+    box-shadow: 10px 10px 100px lightgrey;
+    padding: 7px;
+}
+.service-card img{
+    height: 80px;
+    transition: transform 0.8s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
