@@ -33,7 +33,7 @@ const AddAdmin = () => {
                         <form className="p-5" onSubmit={handleSubmit(onSubmit)}>
                             <div className="form-group">
                                 <label for=""><b>Email</b></label>
-                                <input type="text" ref={register({ required: true })} name="email" placeholder="jon@gamil.com" className="form-control" />
+                                <input type="text" ref={register({ required: true })} name="email" placeholder="jon@gmail.com" className="form-control" />
                                 {errors.name && <span className="text-danger">This field is required</span>}
 
                             </div>
