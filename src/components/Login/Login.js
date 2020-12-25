@@ -50,7 +50,7 @@ const Login = () => {
 
 
     return (
-        <div>
+        <div className="mt-4">
             <Link to="/" className="d-flex justify-content-center">
                 <img style={{ width: "300px" }} className="icon " src={icon} alt="" />
             </Link>
