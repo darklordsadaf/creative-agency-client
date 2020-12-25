@@ -5,6 +5,9 @@ import {
   Route
 } from "react-router-dom";
 import './App.css';
+import AddAdmin from './components/Admin/AddAdmin/AddAdmin';
+import AddProduct from './components/Admin/AddProduct/AddProduct';
+import AllOrder from './components/Admin/AllOrder/AllOrder';
 import Home from './components/Home/Home/Home';
 import Login from './components/Login/Login';
 import PrivateRoute from './components/Login/PrivateRoute';
@@ -35,6 +38,15 @@ function App() {
           </Route>
           <Route path="/review">
             <Review />
+          </Route>
+          <Route path="/admin/add">
+            <AddAdmin />
+          </Route>
+          <Route path="/admin/service">
+            <AddProduct />
+          </Route>
+          <Route path="/admin/order">
+            <AllOrder />
           </Route>
         </Switch>
       </Router>

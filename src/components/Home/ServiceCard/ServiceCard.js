@@ -7,7 +7,7 @@ const ServiceCard = (props) => {
     const { service } = props;
     return (
         <Link to="/order" className="col-md-4 service-card">
-            <img class="display-center" src={service.img} alt="" />
+            <img class="display-center" src={`data:image/png;base64,${service.image.img}`} alt="" />
             <h4 class="text-center my-2">{service.title}</h4>
             <p class="text-center">{service.description}</p>
         </Link>

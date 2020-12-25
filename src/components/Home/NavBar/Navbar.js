@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../../App';
 import logo from '../../../images/logos/logo.png';
@@ -6,6 +6,17 @@ import logo from '../../../images/logos/logo.png';
 
 const Navbar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [isAdmin, setIsAdmin] = useState(false);
+
+    useEffect(() => {
+        fetch('https://stormy-lake-67297.herokuapp.com/isAdmin', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({ email: loggedInUser.email })
+        })
+            .then(res => res.json())
+            .then(data => setIsAdmin(data));
+    }, [])
     return (
         <div className="">
             <nav class="navbar navbar-expand-lg navbar-light">
@@ -24,6 +35,9 @@ const Navbar = () => {
                         <li class="nav-item">
                             <Link class="nav-link mr-4" href="#"><b>Our Portfolio</b></Link>
                         </li>
+                        {isAdmin && <li class="nav-item">
+                            <Link class="nav-link mr-4" to="/admin/order"><b>Admin</b></Link>
+                        </li>}
                         <li class="nav-item">
                             <Link class="nav-link mr-4" ><b>Our Team</b></Link>
                         </li>
