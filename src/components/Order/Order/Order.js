@@ -10,7 +10,7 @@ const Order = () => {
     const onSubmit = data => {
         // console.log(data)
         data.email = loggedInUser.email;
-        fetch('https://stormy-lake-67297.herokuapp.com/addOrder', {
+        fetch('https://obscure-shore-87092.herokuapp.com/addOrder', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)

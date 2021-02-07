@@ -11,7 +11,7 @@ const Review = () => {
     const onSubmit = data => {
         // console.log(data)
         data.img = loggedInUser.photo;
-        fetch('https://stormy-lake-67297.herokuapp.com/addReview', {
+        fetch('https://obscure-shore-87092.herokuapp.com/addReview', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)

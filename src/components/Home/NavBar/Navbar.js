@@ -9,7 +9,7 @@ const Navbar = () => {
     const [isAdmin, setIsAdmin] = useState(false);
 
     useEffect(() => {
-        fetch('https://stormy-lake-67297.herokuapp.com/isAdmin', {
+        fetch('https://obscure-shore-87092.herokuapp.com/isAdmin', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: loggedInUser.email })

@@ -9,7 +9,7 @@ const Service = () => {
     const [order, setOrder] = useState([]);
 
     useEffect(() => {
-        fetch('https://stormy-lake-67297.herokuapp.com/orderByEmail', {
+        fetch('https://obscure-shore-87092.herokuapp.com/orderByEmail', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email: loggedInUser.email })

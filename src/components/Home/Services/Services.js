@@ -28,7 +28,7 @@ const Services = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch('https://stormy-lake-67297.herokuapp.com/products')
+        fetch('https://obscure-shore-87092.herokuapp.com/products')
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -40,6 +40,9 @@ const Services = () => {
             <h2 className="text-center mb-5">Provide awesome <span className="text-green">services</span> </h2>
 
             <div className="row">
+                {
+                    services.length === 0 && <img className="rounded mx-auto d-block " src="https://media1.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="" />
+                }
                 {
                     services.map(service => <ServiceCard service={service}></ServiceCard>)
                 }

@@ -23,7 +23,7 @@ const AddProduct = () => {
         formData.append('title', info.title);
         formData.append('description', info.description);
 
-        fetch('https://stormy-lake-67297.herokuapp.com/addProduct', {
+        fetch('https://obscure-shore-87092.herokuapp.com/addProduct', {
             method: 'POST',
             body: formData
         })
